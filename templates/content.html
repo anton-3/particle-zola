@@ -1,64 +1,65 @@
 {% macro about() %}
  <div class="user-details">
-  <h1> My Expertise </h1>
+  <h1> my expertise </h1>
   <p> {{ config.extra.user_description }} </p>
 </div>
   <div class="user">
     <div class="tech">
-      <h2>Design</h2>
-      <i class="devicon-html5-plain-wordmark"></i>
-      <i class="devicon-bootstrap-plain-wordmark colored"></i>
-      <i class="devicon-sass-original colored"></i>
-      <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
-        Vinyl XOXO lumbersexual</p>
-    </div>
-    <div class="tech">
-      <h2>Code</h2>
+      <h2>frontend</h2>
+      <i class="devicon-html5-plain-wordmark colored"></i>
       <i class="devicon-javascript-plain colored"></i>
       <i class="devicon-react-original-wordmark colored"></i>
-      <i class="devicon-nodejs-plain-wordmark"></i>
-      <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
-        Vinyl XOXO lumbersexual</p>
+      <p>{{ config.extra.frontend_description }}</p>
     </div>
     <div class="tech">
-      <h2>Tools</h2>
-      <i class="devicon-git-plain"></i>
-      <i class="devicon-gulp-plain colored"></i>
-      <i class="devicon-atom-original-wordmark"></i>
-      <p>Mumblecore hexagon kombucha, pitchfork four loko raclette intelligentsia master cleanse.
-        Vinyl XOXO lumbersexual</p>
+      <h2>backend</h2>
+      <i class="devicon-nodejs-plain-wordmark colored"></i>
+      <i class="devicon-java-plain-wordmark colored"></i>
+      <i class="devicon-python-plain-wordmark colored"></i>
+      <p>{{ config.extra.backend_description }}</p>
+    </div>
+    <div class="tech">
+      <h2>tools</h2>
+      <i class="devicon-git-plain colored"></i>
+      <i class="devicon-linux-plain colored"></i>
+      <i class="devicon-intellij-plain colored"></i>
+      <p>{{ config.extra.tools_description }}</p>
     </div>
 </div>
 {% endmacro about %}
 
 {% macro projects() %}
 <div class="user-details">
-  <h1> Featured Projects </h1>
+  <h1> projects </h1>
 </div>
 <div class="user-projects">
   <div class="images-right">
-    <img alt="mountains" src="{{ config.base_url ~ "/img/mountains.jpg" }}" />
+    <img alt="mountains" src="{{ config.base_url ~ config.extra.project1_img }}" />
   </div>
   <div class="contents">
-    <h3> Project Title </h3>
-    <ul>
-      <li> Featured Skills</li>
-    </ul>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a class="project-link" href="#">Check it out</a>
+      <h3> {{ config.extra.project1_title }} </h3>
+    <p> {{ config.extra.project1_description }} </p>
+    <a class="project-link" href="{{ config.extra.project1_link }}" target="_blank">Check it out</a>
   </div>
 </div>
 <div class="user-projects">
   <div class="images-left">
-    <img alt="mountains" src="{{ config.base_url ~ "/img/skate.jpg" }}" />
+    <img alt="mountains" src="{{ config.base_url ~ config.extra.project2_img }}" />
   </div>
   <div class="contents-right">
-    <h3> Project Title </h3>
-    <ul>
-      <li> Featured Skills</li>
-    </ul>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <a class="project-link" href="#">Check it out</a>
+      <h3> {{ config.extra.project2_title }} </h3>
+    <p> {{ config.extra.project2_description }} </p>
+    <a class="project-link" href="{{ config.extra.project2_link }}" target="_blank">Check it out</a>
+  </div>
+</div>
+<div class="user-projects">
+  <div class="images-right">
+    <img alt="mountains" src="{{ config.base_url ~ config.extra.project3_img }}" />
+  </div>
+  <div class="contents">
+      <h3> {{ config.extra.project3_title }} </h3>
+    <p> {{ config.extra.project3_description }} </p>
+    <a class="project-link" href="{{ config.extra.project3_link }}" target="_blank">Check it out</a>
   </div>
 </div>
 {% endmacro projects %}
